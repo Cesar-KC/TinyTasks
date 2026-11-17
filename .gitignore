@@ -1,0 +1,9 @@
+# macOS Finder metadata
+.DS_Store
+
+# Backup created by the Issue 1 sed command
+*.bak
+
+# Python cache
+__pycache__/
+*.pyc
