@@ -1,4 +1,8 @@
-const API = 'http://localhost:8083';
+// Local Docker: API is published on localhost:8083.
+// DIDLab: API runs on port 3000 and is reachable at /api on the same domain.
+const API = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+  ? 'http://localhost:8083'
+  : '/api';
 
 function show(pageId){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
