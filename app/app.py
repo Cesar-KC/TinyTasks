@@ -11,7 +11,7 @@ DB = {
     "port": int(os.getenv("DB_PORT", "5432")),
     "name": os.getenv("DB_NAME", "appdb"),
     "user": os.getenv("DB_USER", "appuser"),
-    "pass": os.getenv("DB_PASS", "changeme123"),
+    "pass": os.getenv("DB_PASS") or os.getenv("DB_PASSWORD", "changeme123"),
 }
 
 def get_conn():
